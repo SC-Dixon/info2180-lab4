@@ -65,8 +65,13 @@ $superheroes = [
 
 ?>
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>
+<?php $textf = $_POST["query"];
+$textf = filter_var($textf, FILTER_SANITIZE_STRING);
+
+echo json_encode(Array(
+    'superheroes' => $superheroes,
+    'query' => $textf
+));
+
+
+?>

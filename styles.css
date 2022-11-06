@@ -1,9 +1,90 @@
 body {
-    margin: 0;
     font-size: 18px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "NotoSans", sans-serif;
 }
 
-.searchBtn{
-    color: gray;
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.hContainer{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    background-color:#63B3ED ;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+#searchBtn{
+    color: white;
+}
+
+
+.search-hero{
+    display:grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    clear: both;
+}
+
+.fcontainer{
+    grid-column: col-start 2 / span 10;
+}
+
+.search-result{
+    display:grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    clear: both;
+}
+
+.rcontainer{
+    grid-column: col-start 2 / span 10;
+    width: 100%;
+}
+
+
+
+#search{
+    padding: 15px;
+    border-radius: 5px;
+    border: 0px;
+    width: 85%;
+}
+
+
+.fcontainer .btn{
+    float: right;
+    position: relative;
+    bottom:45px;
+    color: white;
+    background-color: red;
+    padding: 15px;
+    border-radius: 5px;
+    border: 0px;
+    width: 10%;
+    margin-left: 5px;
+}
+
+div#result.blankspace ul{
+    list-style: disc;
+}
+
+div#result.notFound{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div#result.sFound{
+    color: green;
+}
+
+
